@@ -64,6 +64,72 @@ body {
   transition: all 0.3s ease;
 }
 
+/*test for the devs*/
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Navbar shell */
+.apple-nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 64px;
+
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000;
+}
+
+/* Centered content */
+.nav-inner {
+  display: flex;
+  gap: 48px; /* spacing between links */
+}
+
+/* Links */
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+/* Liquid underline */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: white;
+  border-radius: 999px;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
 /* Links */
 .nav-link {
   position: relative;
